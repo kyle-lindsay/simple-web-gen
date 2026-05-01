@@ -16,6 +16,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.col-accent {
+  color:var(--col-accent);
+}
+
 .container {
   margin: 0;
   padding-top: 10vh;
