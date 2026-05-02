@@ -5,7 +5,7 @@
   "identifier": "com.kyle.simple-web-gen",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:1420",
+    "devUrl": "http://localhost:1420/start",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },

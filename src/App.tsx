@@ -1,23 +1,39 @@
 //import { useState } from "react";
 //import { invoke } from "@tauri-apps/api/core";
+import { JSX } from "react";
 import "./App.css";
+import "./pages/Start"
+import Start from "./pages/Start";
+import Create from "./pages/Create";
+
+let page: JSX.Element;
+
+switch(window.location.pathname.toString()) {
+  case "/start":
+    page = <Start />
+    break;
+  
+  case "/create":
+    page = <Create />
+    break;
+
+  default:
+    page = (
+      <div>
+        <h1>404 Page Not Found</h1>
+        <h1><a href="/start">Return</a></h1>
+      </div>
+    );
+}
 
 function App() {
+  console.log(window.location.pathname.toString());
   return (
     <div>
-      <main className="container">
-        <h1>Simple<span className= "col-accent">Web</span>Gen</h1>
-
-        <p className="description">SimpleWebGen is a lightweight, easy to use website generator perfect for creating responsive static web pages. Create good looking websites with no previous experience just by defining your content and pressing generate.</p>
-
-        <div className="select-mode">
-          <button>Create New</button>
-          <button>Upload</button>
-        </div>
-      </main>
-      <footer className = "footer">© Kyle Lindsay 2026</footer>
+      {page}
+      <footer className = "footer">© 2026 Kyle Lindsay <a href="/start">back</a></footer>
     </div>
-  );
+  )
 }
 
 export default App;
