@@ -1,6 +1,9 @@
 function Create() {
     return (
-        <h1>Create Page</h1>
+        <div>
+            <aside></aside>
+            <main></main>
+        </div>
     );
 }
 

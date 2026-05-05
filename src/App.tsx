@@ -20,7 +20,7 @@ switch(window.location.pathname.toString()) {
   default:
     page = (
       <div>
-        <h1>404 Page Not Found</h1>
+        <h1>This feature is still under construction</h1>
         <h1><a href="/start">Return</a></h1>
       </div>
     );
